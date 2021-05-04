@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<h1>Repetir</h1>
+
+<p>
+    Palavra: <br>
+    <input type="text" id="campoPalavra">
+</p>
+
+<p>
+    Quantidade de Repetições: <br>
+    <input type="number" id="campoQtdRepeticoes">
+</p>
+
+<button onclick="repetirPalavra()">
+    Repetir Palavra
+</button>
+
+<p id="exibidorPalavra">
+
+</p>
+
+<script>
+
+    function repetirPalavra()
+    {
+        var palavra = campoPalavra.value 
+        var repeticoes = campoQtdRepeticoes.valueAsNumber 
+        exibidorPalavra.innerHTML = ""
+
+        for (var contagem = 1; contagem <= repeticoes; contagem++)
+        {
+            exibidorPalavra.innerHTML += palavra + "<br>"
+        }
+    }
+
+</script>

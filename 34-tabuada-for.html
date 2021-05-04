@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+<h1>Tabuada (com looping FOR)</h1>
+
+<p>Preencha o campo abaixo para ver a tabuada do número desejado:</p>
+
+<p>
+    Número: <br>
+    <input type="number" id="campoNumero">
+    <button onclick="criarTabuada()">
+        Ver Tabuada
+    </button>
+</p>
+
+<p id="exibidorTabuada">
+    Sua tabuada será exibida aqui :)
+</p>
+
+<script>
+
+    function criarTabuada()
+    {
+        var numero = campoNumero.valueAsNumber 
+
+        if (isNaN(numero))
+        {
+            alert('Número inválido!')
+        }
+        else 
+        {
+            exibidorTabuada.innerHTML = ""
+            
+            for (var multiplicador = 1; multiplicador <= 10; multiplicador++) 
+            {
+                var resultado = numero * multiplicador
+                exibidorTabuada.innerHTML += `${numero} x ${multiplicador} = ${resultado} <br>`
+            }
+        }
+
+        campoNumero.value = ''
+        campoNumero.focus()
+    }
+
+
+</script>

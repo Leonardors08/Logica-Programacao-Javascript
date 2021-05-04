@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<h1>Soma Intervalo</h1>
+
+<script src="js/pegaNumero.js"></script>
+<script>
+
+    var inicio = pegaInt('Informe o número inicial:') // 5
+    var fim = pegaInt('Informe o número final:') // 8
+    var soma = 0
+
+    if (fim > inicio)
+    {
+        for (var contagem = inicio; contagem <= fim; contagem++)
+        {
+            soma += contagem
+        }
+
+        document.write('Total da soma é: ' + soma)
+    }
+
+</script>
